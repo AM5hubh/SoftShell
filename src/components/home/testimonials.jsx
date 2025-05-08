@@ -87,7 +87,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="py-20 bg-white overflow-hidden">
+    <section className="py-20 overflow-hidden" id="testimonials">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section header */}
         <div
@@ -98,11 +98,11 @@ export default function TestimonialsSection() {
               : "translate-y-10 opacity-0"
           }`}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             What Our Clients Say
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
             Don't just take our word for it. See what businesses like yours have
             achieved with SoftSell.
           </p>
@@ -147,7 +147,7 @@ export default function TestimonialsSection() {
                       <div className="flex justify-center mb-3">
                         {renderStars(testimonial.rating)}
                       </div>
-                      <p className="text-lg text-gray-700 italic text-center">
+                      <p className="md:text-lg text-gray-700 italic text-center">
                         "{testimonial.quote}"
                       </p>
                     </div>
@@ -204,7 +204,7 @@ export default function TestimonialsSection() {
           }`}
         >
           <div className="text-center mb-8">
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-xl font-bold mb-2">
               Trusted by Companies Worldwide
             </h3>
           </div>

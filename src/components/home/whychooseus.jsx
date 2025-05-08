@@ -57,7 +57,7 @@ export default function WhyChooseUsSection() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-500/5 " id="why-choose-us">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section header */}
         <div
@@ -68,11 +68,11 @@ export default function WhyChooseUsSection() {
               : "translate-y-10 opacity-0"
           }`}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold   mb-4">
             Why Choose SoftSell
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
             We're revolutionizing software license reselling with our secure
             marketplace, cutting-edge technology, and customer-first approach.
           </p>
@@ -84,7 +84,7 @@ export default function WhyChooseUsSection() {
             <div
               key={feature.id}
               id={feature.id}
-              className={`feature-animate bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 transform transition-all duration-1000 ease-out delay-${
+              className={`border border-indigo-800/50 feature-animate rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 transform ease-out delay-${
                 index * 150
               } ${
                 visibleItems.includes(feature.id)
@@ -102,10 +102,12 @@ export default function WhyChooseUsSection() {
 
                 {/* Content */}
                 <div className="ml-5">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  <h3 className="text-xl font-bold  mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <p className="text-gray-500 ">
+                    {feature.description}
+                  </p>
                 </div>
               </div>
 

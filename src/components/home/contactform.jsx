@@ -126,7 +126,10 @@ export default function ContactFormSection() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
+    <section
+      className="py-20 bg-gray-500/5 relative overflow-hidden"
+      id="contact"
+    >
       {/* Background elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500 opacity-5 rounded-full translate-x-32 -translate-y-32"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500 opacity-5 rounded-full -translate-x-40 translate-y-40"></div>
@@ -141,11 +144,11 @@ export default function ContactFormSection() {
               : "translate-y-10 opacity-0"
           }`}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Get Your Free License Valuation
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
             Fill out the form below and our team will provide a no-obligation
             quote for your unused software licenses within 24 hours.
           </p>
@@ -193,8 +196,11 @@ export default function ContactFormSection() {
 
             {/* Form */}
             {!isSubmitted && (
-              <form onSubmit={handleSubmit} className="p-6 md:p-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <form
+                onSubmit={handleSubmit}
+                className="p-6 md:p-8 text-gray-700"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
                   {/* Name field */}
                   <div>
                     <label
@@ -306,7 +312,7 @@ export default function ContactFormSection() {
                         name="licenseType"
                         value={formState.licenseType}
                         onChange={handleChange}
-                        className={`w-full px-4 py-3 rounded-lg border ${
+                        className={`w-full px-4 py-3 rounded-lg border text-gray-700 ${
                           errors.licenseType
                             ? "border-red-400"
                             : "border-gray-300"

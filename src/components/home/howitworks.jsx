@@ -50,7 +50,7 @@ export default function HowItWorksSection() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 " id="how-it-works">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section header */}
         <div
@@ -61,11 +61,11 @@ export default function HowItWorksSection() {
               : "translate-y-10 opacity-0"
           }`}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold  mb-4">
             How It Works
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
             Turn your unused software licenses into cash with our simple
             three-step process.
           </p>
@@ -102,12 +102,12 @@ export default function HowItWorksSection() {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-gray-800 mb-2">
+              <h3 className="text-xl font-bold mb-2">
                 {step.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600">{step.description}</p>
+              <p className="text-gray-500">{step.description}</p>
             </div>
           ))}
         </div>

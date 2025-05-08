@@ -21,14 +21,36 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Toggle dark mode
+  // Initialize dark mode based on system preference
+  useEffect(() => {
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    setIsDarkMode(prefersDark);
+  }, []);
+  
+  // Toggle dark mode and save preference
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
   }, [isDarkMode]);
+
+  // Load saved theme preference
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+      setIsDarkMode(true);
+    } else if (savedTheme === "light") {
+      setIsDarkMode(false);
+    }
+    // If no saved preference, it will default to the system preference set earlier
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -40,7 +62,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
+      className={`fixed w-full z-50 transition-all duration-300 rounded-b-xl ${
         isScrolled
           ? "bg-white dark:bg-gray-900 shadow-md py-2"
           : "bg-transparent py-4"
@@ -49,7 +71,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo & Brand */}
-          <div className="flex-shrink-0 flex items-center">
+          <a className="flex-shrink-0 flex items-center" href="#home">
             <div className="h-8 w-8 bg-blue-600 rounded-md flex items-center justify-center mr-2">
               <span className="text-white font-bold text-lg">S</span>
             </div>
@@ -62,7 +84,7 @@ export default function Navbar() {
             >
               SoftSell
             </span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
