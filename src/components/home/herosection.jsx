@@ -11,7 +11,10 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 to-purple-800 text-white w-full flex items-center justify-center" id="home">
+    <div
+      className="relative overflow-hidden bg-gradient-to-br from-indigo-900 to-purple-800 text-white w-full flex items-center justify-center"
+      id="home"
+    >
       {/* Abstract animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500 rounded-full opacity-20 animate-pulse"></div>
@@ -84,22 +87,22 @@ export default function HeroSection() {
           }`}
         >
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-300 to-indigo-300 bg-clip-text text-transparent mb-1">
+            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent mb-1">
               $14M+
             </div>
-            <div className="text-sm text-indigo-200">Recovered For Clients</div>
+            <div className="text-sm text-indigo-400">Recovered For Clients</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent mb-1">
+            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent mb-1">
               5,000+
             </div>
-            <div className="text-sm text-indigo-200">Licenses Resold</div>
+            <div className="text-sm text-indigo-400">Licenses Resold</div>
           </div>
           <div className="text-center col-span-2 md:col-span-1">
-            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent mb-1">
+            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-1">
               24 hrs
             </div>
-            <div className="text-sm text-indigo-200">Average Payout Time</div>
+            <div className="text-sm text-indigo-400">Average Payout Time</div>
           </div>
         </div>
       </div>
@@ -112,8 +115,8 @@ export default function HeroSection() {
           className="w-full"
         >
           <path
-            fill="currentColor"
-            fillOpacity="1"
+            fill = "#000000"
+            fillOpacity="0.8"
             d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           ></path>
         </svg>

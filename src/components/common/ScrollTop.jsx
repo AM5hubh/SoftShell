@@ -33,7 +33,7 @@ const ScrollTop = () => {
       {visible && (
         <button
           onClick={scrollToTop}
-          className="fixed w-12 h-12 bottom-12 md:bottom-8 right-5  bg-gradient-to-br from-indigo-900 to-purple-800 text-white py-2 px-4 rounded-full shadow-md hover:bottom-10 transition-all duration-300 z-50 flex justify-center items-center"
+          className="fixed w-12 h-12 bottom-20  right-6  bg-gradient-to-br from-indigo-900 to-purple-800 text-white py-2 px-4 rounded-full shadow-md hover:bottom-22 transition-all duration-300 z-50 flex justify-center items-center"
         >
           <ArrowUpFromDot />
         </button>
